@@ -1,5 +1,6 @@
 package com.seleniumproject.base;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,6 +20,7 @@ public class TestBase {
     public static Properties config = new Properties();
     public static Properties OR = new Properties();
     public static FileInputStream fis;
+    public static Logger log = Logger.getLogger("devpinoyLogger");
 
     @BeforeSuite
     public void setUp(){
@@ -30,6 +32,7 @@ public class TestBase {
             }
             try {
                 config.load(fis);
+                log.debug("Config file loaded");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -40,27 +43,34 @@ public class TestBase {
             }
             try {
                 OR.load(fis);
+                log.debug("OR file loaded");
             } catch (IOException e) {
                 e.printStackTrace();
             }
             if(config.getProperty("browser").equals("firefox")){
                 System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\geckodriver.exe");
                 driver = new FirefoxDriver();
+                log.debug("Firefox launched");
             }
             else if(config.getProperty("browser").equals("chrome")){
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
                 driver = new ChromeDriver();
+                log.debug("Chrome launched");
             }
             else if(config.getProperty("browser").equals("opera")){
                 System.setProperty("webdriver.opera.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\operadriver.exe");
                 driver = new OperaDriver();
+                log.debug("Opera launched");
             }
             else if(config.getProperty("browser").equals("ie")){
                 System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\IEDriverServer.exe");
                 driver = new InternetExplorerDriver();
+                log.debug("IE launched");
             }
             driver.get(config.getProperty("testsiteurl"));
+            log.debug("Went to "+ config.getProperty("testsiteurl"));
             driver.manage().window().maximize();
+            log.debug("Maximized window");
             driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
         }
     }
@@ -68,6 +78,7 @@ public class TestBase {
     public void tearDown(){
         if(driver!=null){
             driver.quit();
+            log.debug("Driver teardown");
         }
     }
 }
