@@ -1,7 +1,9 @@
 package com.seleniumproject.base;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -12,6 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +24,16 @@ public class TestBase {
     public static Properties OR = new Properties();
     public static FileInputStream fis;
     public static Logger log = Logger.getLogger("devpinoyLogger");
+
+    protected boolean isElementPresent(By by){
+        try {
+            driver.findElement(by);
+            return true;
+        }catch (NoSuchElementException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 
     @BeforeSuite
     public void setUp(){
@@ -54,6 +67,7 @@ public class TestBase {
             }
             else if(config.getProperty("browser").equals("chrome")){
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.silentOutput","true");
                 driver = new ChromeDriver();
                 log.debug("Chrome launched");
             }

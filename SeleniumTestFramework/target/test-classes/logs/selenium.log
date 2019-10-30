@@ -1,0 +1,9 @@
+2019-10-30 20:09:34 DEBUG devpinoyLogger:48 - Config file loaded
+2019-10-30 20:09:34 DEBUG devpinoyLogger:59 - OR file loaded
+2019-10-30 20:09:39 DEBUG devpinoyLogger:72 - Chrome launched
+2019-10-30 20:09:41 DEBUG devpinoyLogger:85 - Went to http://www.way2automation.com/angularjs-protractor/banking/#/login
+2019-10-30 20:09:45 DEBUG devpinoyLogger:87 - Maximized window
+2019-10-30 20:09:45 DEBUG devpinoyLogger:11 - Login as Bank Manager test started
+2019-10-30 20:09:45 DEBUG devpinoyLogger:13 - Clicked button
+2019-10-30 20:09:46 DEBUG devpinoyLogger:18 - Test ended
+2019-10-30 20:09:46 DEBUG devpinoyLogger:95 - Driver teardown
