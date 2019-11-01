@@ -1,5 +1,6 @@
 package com.seleniumproject.base;
 
+import com.seleniumproject.utilities.ExcelReader;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,7 @@ public class TestBase {
     public static Properties OR = new Properties();
     public static FileInputStream fis;
     public static Logger log = Logger.getLogger("devpinoyLogger");
+    public static ExcelReader excelReader = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\testdata.xlsx");
 
     protected boolean isElementPresent(By by){
         try {

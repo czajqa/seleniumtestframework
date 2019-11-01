@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Data Driven Framework">
-    <test verbose="2" preserve-order="true" name="Login Test">
+    <test name="Bank Manager Login Test">
         <classes>
-            <class name="com.seleniumproject.testcases.LoginTest">
-                <methods>
-                    <include name="loginAsBankManager"/>
-                </methods>
-            </class>
+            <class name="com.seleniumproject.testcases.BankManagerLoginTest"></class>
+        </classes>
+    </test>
+    <test name="Add Customer Test">
+        <classes>
+            <class name="com.seleniumproject.testcases.AddCustomerTest"></class>
         </classes>
     </test>
 </suite>
