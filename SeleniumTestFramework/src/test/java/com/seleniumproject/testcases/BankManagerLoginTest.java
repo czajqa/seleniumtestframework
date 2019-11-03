@@ -3,6 +3,7 @@ package com.seleniumproject.testcases;
 import com.seleniumproject.base.TestBase;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class BankManagerLoginTest extends TestBase {
@@ -16,5 +17,8 @@ public class BankManagerLoginTest extends TestBase {
         Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("openAccBtn"))));
         Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("customersBtn"))));
         log.debug("Test ended");
+        Reporter.log("Test successfully executed");
+        System.setProperty("org.uncommons.reportng.escape-output","false");
+        Reporter.log("<a href=\"C:\\Users\\Patryk\\Documents\\Lightshot\\test.jpg\">Screenshot</a>");
     }
 }
