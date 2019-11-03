@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Data Driven Framework">
-    <test name="Bank Manager Login Test">
+    <test name="BankManagerLoginTest">
         <classes>
             <class name="com.seleniumproject.testcases.BankManagerLoginTest"></class>
         </classes>
     </test>
-    <test name="Add Customer Test">
+    <test name="AddCustomerTest">
         <classes>
             <class name="com.seleniumproject.testcases.AddCustomerTest"></class>
         </classes>

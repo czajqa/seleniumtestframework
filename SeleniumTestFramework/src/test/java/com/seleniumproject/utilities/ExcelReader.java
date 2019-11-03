@@ -1,5 +1,7 @@
 package com.seleniumproject.utilities;
 
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -11,12 +13,12 @@ import java.io.FileOutputStream;
 public class ExcelReader {
 
     public String path;
-    public FileInputStream fis = null;
-    public FileOutputStream fileOut = null;
-    private XSSFWorkbook workbook = null;
-    private XSSFSheet sheet = null;
-    private XSSFRow row = null;
-    private XSSFCell cell = null;
+    public FileInputStream fis;
+    public FileOutputStream fileOut;
+    private XSSFWorkbook workbook;
+    private XSSFSheet sheet;
+    private XSSFRow row;
+    private XSSFCell cell;
 
     public ExcelReader(String path){
         this.path = path;
@@ -26,12 +28,12 @@ public class ExcelReader {
             sheet = workbook.getSheetAt(0);
             fis.close();
         }catch (Exception e){
-
+            e.printStackTrace();
         }
     }
 
     public int getRowCount(String sheetName){
-        return workbook.getSheet(sheetName).getLastRowNum();
+        return workbook.getSheet(sheetName).getLastRowNum()+1;
     }
 
     public int getColumnCount(String sheetName){
@@ -39,6 +41,6 @@ public class ExcelReader {
     }
 
     public String getCellData (String sheetName, int column, int row){
-        return workbook.getSheet(sheetName).getRow(row).getCell(column).toString();
+        return workbook.getSheet(sheetName).getRow(row-1).getCell(column).toString();
     }
 }
