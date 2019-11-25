@@ -1,9 +1,13 @@
 package com.seleniumproject.listeners;
 
+import com.seleniumproject.utilities.TestUtil;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class CustomListeners implements ITestListener {
 
@@ -17,8 +21,15 @@ public class CustomListeners implements ITestListener {
 
     public void onTestFailure(ITestResult result) {
         System.setProperty("org.uncommons.reportng.escape-output","false");
-        Reporter.log("Capturing screenshot");
-        Reporter.log("<a target=\"_blank\" href=\"C:\\Users\\Patryk\\Documents\\Lightshot\\test.jpg\">Screenshot</a>");
+        try {
+            TestUtil.captureScreenshot();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Reporter.log("Click to see screenshot");
+        Reporter.log("<a target=\"_blank\" href="+TestUtil.screenshotName+">Screenshot</a>");
+        Reporter.log("<br/>");
+        Reporter.log("<a target=\"_blank\" href="+TestUtil.screenshotName+"><img width=\"200\" height=\"100\" src="+TestUtil.screenshotName);
     }
 
     public void onTestSkipped(ITestResult result) {
