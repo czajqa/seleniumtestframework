@@ -1,3 +1,9 @@
 C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\base\TestBase.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\utilities\ExtentManager.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\testcases\BankManagerLoginTest.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\listeners\CustomListeners.java
 C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\rough\TestProperties.java
-C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\testcases\LoginTest.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\testcases\AddCustomerTest.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\rough\TestTimeStamp.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\utilities\ExcelReader.java
+C:\git\SeleniumTestFramework\src\test\java\com\seleniumproject\utilities\TestUtil.java

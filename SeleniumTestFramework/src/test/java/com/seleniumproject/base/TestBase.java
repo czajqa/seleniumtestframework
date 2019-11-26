@@ -1,6 +1,9 @@
 package com.seleniumproject.base;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.seleniumproject.utilities.ExcelReader;
+import com.seleniumproject.utilities.ExtentManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +31,8 @@ public class TestBase {
     public static Logger log = Logger.getLogger("devpinoyLogger");
     public static ExcelReader excelReader = new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\testdata.xlsx");
     public static WebDriverWait wait;
+    public ExtentReports reports = ExtentManager.getIstance();
+    public static ExtentTest test;
 
     protected boolean isElementPresent(By by){
         try {

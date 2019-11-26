@@ -1,10 +1,20 @@
-2019-11-24 21:33:17 DEBUG devpinoyLogger:52 - Config file loaded
-2019-11-24 21:33:17 DEBUG devpinoyLogger:63 - OR file loaded
-2019-11-24 21:33:23 DEBUG devpinoyLogger:76 - Chrome launched
-2019-11-24 21:33:24 DEBUG devpinoyLogger:89 - Went to http://www.way2automation.com/angularjs-protractor/banking/#/login
-2019-11-24 21:33:28 DEBUG devpinoyLogger:91 - Maximized window
-2019-11-24 21:33:28 DEBUG devpinoyLogger:11 - Login as Bank Manager test started
-2019-11-24 21:33:28 DEBUG devpinoyLogger:13 - Clicked button
-2019-11-24 21:33:29 DEBUG devpinoyLogger:18 - Test ended
-2019-11-24 21:33:29 DEBUG devpinoyLogger:15 - In AddCustomerTest
-2019-11-24 21:33:31 DEBUG devpinoyLogger:100 - Driver teardown
+2019-11-26 19:24:40 DEBUG devpinoyLogger:57 - Config file loaded
+2019-11-26 19:24:40 DEBUG devpinoyLogger:68 - OR file loaded
+2019-11-26 19:24:46 DEBUG devpinoyLogger:81 - Chrome launched
+2019-11-26 19:24:47 DEBUG devpinoyLogger:94 - Went to http://www.way2automation.com/angularjs-protractor/banking/#/login
+2019-11-26 19:24:51 DEBUG devpinoyLogger:96 - Maximized window
+2019-11-26 19:24:51 DEBUG devpinoyLogger:11 - Login as Bank Manager test started
+2019-11-26 19:24:51 DEBUG devpinoyLogger:13 - Clicked button
+2019-11-26 19:24:52 DEBUG devpinoyLogger:18 - Test ended
+2019-11-26 19:24:53 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("pl_PL", UTF-8, parsed); will try to load it.
+2019-11-26 19:24:53 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_pl_PL.ftl"): Not found
+2019-11-26 19:24:53 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_pl.ftl"): Not found
+2019-11-26 19:24:53 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-11-26 19:24:53 DEBUG cache:45 - Loading template for "Extent.ftl"("pl_PL", UTF-8, parsed) from "jar:file:/C:/Users/Patryk/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2019-11-26 19:24:53 DEBUG devpinoyLogger:15 - In AddCustomerTest
+2019-11-26 19:24:53 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("pl_PL", UTF-8, parsed); will try to load it.
+2019-11-26 19:24:53 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_pl_PL.ftl"): Not found
+2019-11-26 19:24:53 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_pl.ftl"): Not found
+2019-11-26 19:24:53 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2019-11-26 19:24:53 DEBUG cache:45 - Loading template for "Extent.ftl"("pl_PL", UTF-8, parsed) from "jar:file:/C:/Users/Patryk/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2019-11-26 19:24:54 DEBUG devpinoyLogger:105 - Driver teardown
